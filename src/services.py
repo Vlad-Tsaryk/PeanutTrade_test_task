@@ -27,7 +27,6 @@ async def fetch_orderbook(symbol):
                 logger.error(f"Failed to process orderbook for {symbol}: {e}")
 
 
-@SEND_MESSAGE_TIME.time()
 async def send_telegram_message(message_text: str) -> None:
     await bot.send_message(settings.CHAT_ID, message_text)
 
