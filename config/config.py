@@ -7,9 +7,13 @@ from pydantic_settings import BaseSettings
 class Settings(BaseSettings):
     PROJECT_NAME: str
     SYMBOLS: List[str] = ["btcusdt", "ethusdt", "solusdt"]
-    DEVIATION_THRESHOLD: float = 2
+    DEVIATION_THRESHOLD: float = 4
+    BOT_TOKEN: SecretStr
+    CHAT_ID: int
 
     # POSTGRES_CONF
+    POSTGRES_NAME: str
+    POSTGRES_PORT: str
     POSTGRES_DB: str
     POSTGRES_HOST: str
     POSTGRES_USER: str
@@ -30,7 +34,7 @@ class Settings(BaseSettings):
         )
 
     class Config:
-        env_file = "../.env"
+        env_file = ".env"
 
 
 settings = Settings()
