@@ -37,10 +37,10 @@ async def calculate_deviation(symbol, mid_price, buy_volume, sell_volume) -> Non
         )
         if average_buy_volume and average_sell_volume:
             buy_volume_deviation = (
-                    abs(buy_volume - average_buy_volume) / average_buy_volume
+                abs(buy_volume - average_buy_volume) / average_buy_volume
             )
             sell_volume_deviation = (
-                    abs(sell_volume - average_sell_volume) / average_sell_volume
+                abs(sell_volume - average_sell_volume) / average_sell_volume
             )
 
         if buy_volume_deviation > settings.DEVIATION_THRESHOLD:

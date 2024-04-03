@@ -7,7 +7,7 @@ from pydantic_settings import BaseSettings
 class Settings(BaseSettings):
     PROJECT_NAME: str
     SYMBOLS: List[str] = ["btcusdt", "ethusdt", "solusdt"]
-    DEVIATION_THRESHOLD: float = 4
+    DEVIATION_THRESHOLD: float = 3
     BOT_TOKEN: SecretStr
     CHAT_ID: int
 
