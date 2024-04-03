@@ -7,7 +7,6 @@ import pandas as pd
 from config.bot import bot
 from config.config import settings
 from config.prometheus_collectors import (
-    SEND_MESSAGE_TIME,
     PROCESS_ORDERBOOK_TIME,
     CALCULATE_DEVIATION_TIME,
 )
